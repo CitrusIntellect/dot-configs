@@ -1,0 +1,117 @@
+* {
+    font-family: 'FiraCode Nerd Font', sans-serif;
+    font-size: 15px;
+    min-height: 0px;
+    background-color: transparent;
+}
+
+#window, #clock, #system, #keyboard, #pulseaudio, #backlight, #hardware, #custom-music, #custom-wlogout, #tray, #pulseaudio.microphone, #custom-wireguard {
+    background: rgba(0, 0, 0, 0.466);
+    margin: 5px;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.603);
+    border-radius: 10px;
+    margin-bottom: 0px;
+}
+#custom-wlogout {
+    padding-right: 4px;
+    color: #89fabc
+}
+
+#custom-wireguard {
+    color: #eba0e7;
+}
+
+/* Workspaces */
+
+#workspaces {
+    background: rgba(0, 0, 0, 0.466);
+    margin: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.603);
+    border-radius: 10px;
+    margin-bottom: 0px;
+    font-size: 1px;
+}
+
+#battery {
+    color: #ebe4a0;
+}
+
+#custom-music {
+    color: #a0ebd8;
+}
+
+#workspaces button.active {
+    color: #a0e9eb;
+}
+
+#workspaces button.urgent {
+    color: #974c4c
+}
+
+#workspaces button.hover {
+    background: #3d484d;
+    border: none;
+    color: #000000;
+}
+
+#workspaces text {
+    background: #3d484d;
+    border: none;
+    color: #000000;
+}
+
+#workspaces button {
+    border: none;
+    border-radius: 30px;
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+
+tooltip {
+    background: rgba(0, 0, 0, 0.863);
+    border: 1px solid rgb(0, 0, 0);
+}
+
+tooltip label {
+    color: white;
+}
+
+#backlight {
+    color: #89fabc;
+}
+
+#network {
+    color: #f9e2af;
+}
+
+#bluetooth {
+    color: #89b4fa;
+}
+
+#pulseaudio {
+    color: #89facb;
+}
+
+#pulseaudio.microphone {
+    color: #cba6f7;
+}
+
+#clock {
+    color: #fab387;
+}
+
+#cpu {
+    color: #a6e3a1;
+}
+
+#memory {
+    color: #eba0ac;
+}
+
+#window {
+    color: #a6e3a1;
+}
+

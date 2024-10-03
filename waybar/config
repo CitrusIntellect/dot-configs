@@ -1,0 +1,35 @@
+{
+    "layer": "top",
+    "height": 33,
+
+    "include": ["$HOME/.config/waybar/modules.json"],
+
+    "modules-center": ["clock"],
+    "modules-left": ["hyprland/workspaces", "tray", "hyprland/window", "custom/music", "custom/wireguard"],
+    "modules-right": ["group/hardware", "backlight", "pulseaudio#microphone", "pulseaudio", "group/system", "custom/wlogout"],
+
+
+    "group/system": {
+        "orientation": "horizontal",
+        "modules": [
+            "network",
+            "bluetooth"
+        ]
+    },
+
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10,
+        "show-passive-items": true
+    },
+
+    "group/hardware": {
+        "orientation": "horizontal",
+        "modules": [
+            "cpu",
+            "memory",
+            "battery"
+        ]
+    }
+}
+

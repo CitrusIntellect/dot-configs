@@ -1,0 +1,134 @@
+{
+    "hyprland/workspaces": {
+            "format": "{icon}",
+            "format-icons": {
+                "default": "○",
+                "active": "●",
+                "urgent": "○!"
+        },
+        "on-click": "activate",
+        "sort-by-number": true,
+        "active-only": false
+    },
+
+    "hyprland/window": {
+        "format": "{title}",
+        "max-length": 100,
+        "separate-outputs": true,
+        "rewrite": {
+            "(.*) Kate": "Kate",
+            "(.*) Konsole": "Konsole",
+            "(.*) Discord": "Discord",
+            "(.*) VSCodium": "VSCodium",
+            "(.*) Brave": "Brave",
+            "(.*)OBS(.*)": "OBS Studio",
+            "(.*) Dolphin": "Dolphin",
+            "(.*)Nemo(.*)": "Nemo",
+            "(.*)Google Chrome(.*)": "Google Chrome"
+        }
+
+    },
+
+    "custom/music": {
+        "format": "♫",
+        "format-alt": "♫ {}",
+        "exec": "RSPOTIFY_CLIENT_SECRET=No RSPOTIFY_CLIENT_ID=no spotifatius monitor",
+        "return-type": "json",
+        "on-click-right": "spotifatius toggle-liked",
+        "tooltip-format": "{}"
+    },
+
+    "clock": {
+        "format": "{:%I:%M %p}"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "tooltip": false,
+        "format-muted": " Muted",
+        "on-click": "pamixer -t",
+        "on-scroll-up": "pamixer -i 5",
+        "on-scroll-down": "pamixer -d 5",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "default": ["", " ", " "]
+        }
+    },
+
+    "network": {
+        "format": " {ifname}",
+        "format-wifi": "<span> </span> {signalStrength}%",
+        "format-ethernet": "<span> </span>",
+        "format-disconnected": "?",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "tooltip-format-wifi": "{essid}-{bssid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname} - {ipaddr}",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50
+    },
+
+    "bluetooth": {
+        "format": "<span color=\"#3D484D\"> | </span><span color=\"#89b4fa\" weight=\"bold\"></span>",
+        "format-disabled": "<span color=\"#3D484D\"> | </span><span color=\"#89b4fa\" weight=\"bold\"></span>",
+        "on-click": "blueberry"
+    },
+
+    "custom/wireguard": {
+        "format": "{}<big> </big>",
+        "exec": "~/.config/waybar/wireguard-rofi-waybar/wireguard.sh",
+        "on-click": "rofi -modi 'WireGuard:~/.config/waybar/wireguard-rofi-waybar/wireguard-rofi.sh' -show WireGuard",
+        "interval": 60,
+        "return-type": "json"
+    },
+
+    "cpu": {
+        "format": "<span></span> {usage}%"
+    },
+    "memory": {
+        "format": "<span  color=\"#FFFFFF\"> | </span><span></span> {}%"
+    },
+
+    "custom/wlogout": {
+        "format": "⏻ ",
+        "on-click": "wlogout",
+        "tooltip": false
+    },
+
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "  Muted",
+        "on-click": "pamixer --default-source -t",
+        "on-scroll-up": "pamixer --default-source -i 5",
+        "on-scroll-down": "pamixer --default-source -d 5",
+        "scroll-step": 5
+    },
+
+    "backlight": {
+        "device": "intel_backlight",
+        "on-scroll-up": "brightnessctl set 1%+",
+        "on-scroll-down": "brightnessctl set 1%-",
+        "format": "{icon} {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠"]
+    },
+
+    "battery": {
+                "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "<span  color=\"#FFFFFF\"> | </span>{icon} {capacity}%",
+        "format-charging": "<span  color=\"#FFFFFF\"> | </span>{icon}  {capacity}%",
+        "format-plugged": "<span  color=\"#FFFFFF\"> | </span>{icon}   {capacity}%",
+        "format-alt": "<span  color=\"#FFFFFF\"> | </span>{icon}  {time} {icon}",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    }
+
+
+}
